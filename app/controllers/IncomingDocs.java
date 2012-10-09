@@ -30,7 +30,7 @@ public class IncomingDocs extends Controller {
 	
 	  public static Result index() {
 		    //return ok("Hello world");
-		    return ok(views.html.listIncoming.render("Λίστα εισερχόμενης αλληλογραφίας.", User.find.byId(request().username())));
+		    return ok(views.html.listIncoming.render("Λίστα εισερχόμενης αλληλογραφίας..", User.find.byId(request().username())));
 		  }
  
  
