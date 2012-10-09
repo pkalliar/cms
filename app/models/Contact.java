@@ -23,6 +23,7 @@ public class Contact extends Model {
  
   public String title;
   public String email;
+  
  
   public static Model.Finder<Long,Contact> find = new Model.Finder(Long.class, Contact.class);
  

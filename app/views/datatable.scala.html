@@ -1,13 +1,17 @@
-@(message: String)
+@(message: String, user: User)
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
  
-@main("Play!ing with DataTables") {
+@main("Ηλεκτρονικό Αρχείο Πρεσβείας Τρίπολης", user) {
  
 <script type="text/javascript">
   /* Table initialisation */
   $(document).ready(function() {
     $('#contacts_table').dataTable( {
       "bProcessing": true,
-      "aaSorting": [[ 0, "asc" ]],
+      "aaSorting": [[ 0, "desc" ]],
       "bServerSide": true,
       "bJQueryUI": true,
       "sPaginationType": "full_numbers",
@@ -16,22 +20,29 @@
   });
 </script>
  
-<h2>Play!ing with DataTables</h2>
+<strong>@message</strong>
  
 <table id="contacts_table" class='display'>
   <thead>
     <tr>
-      <th>όνομα</th>
-      <th>Title</th>
-      <th>E-mail</th>
+      <th>ΑΣ</th>
+      <th>ΦΑΚΕΛΟΣ</th>
+      <th>ΗΜΕΡΟΜΗΝΙΑ</th>
+      <th>ΔΗΜΙΟΥΡΓΟΣ</th>
+      <th>ΘΕΜΑ</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Row 1 Data 1</td>
-      <td>Row 1 Data 2</td>
-      <td>etc</td>
+      <td width="10%">Initializing..</td>
+      <td width="15%">Initializing..</td>
+      <td width="15%">Initializing..</td>
+      <td width="15%">Initializing..</td>
+      <td width="45%">Initializing..</td>
     </tr>
   </tbody>
 </table>
+
+    
 }
+
