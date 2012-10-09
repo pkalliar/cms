@@ -1,0 +1,391 @@
+folderCategories:
+
+    - !!models.FolderCategory
+        id:     1
+        name:   Πολιτικά
+
+    - !!models.FolderCategory
+        id:     2
+        name:   Προξενικά
+        
+    - !!models.FolderCategory
+        id:     3
+        name:   Οικονομικά
+        
+    - !!models.FolderCategory
+        id:     4
+        name:   Πρεσβεία
+        
+folders:
+
+    - !!models.Folder
+        name:   Επιτετραμμένος
+        code: 055.2
+        category:    !!models.FolderCategory
+          id:      4
+
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Σάμουελ
+        code: 055.ΣΜ
+        category:    !!models.FolderCategory
+          id:      4
+
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Ι. Μιτζάλη
+        code: 055.IM
+        category:    !!models.FolderCategory
+          id:      4
+          
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Ζαχούρ
+        code: 055.ΖΑ
+        category:    !!models.FolderCategory
+          id:      4
+
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Άμπεντ Κουντάι
+        code: 055.ΑΚ
+        category:    !!models.FolderCategory
+          id:      4
+          
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Ι. Πυρόβολου
+        code: 055.ΙΠ
+        category:    !!models.FolderCategory
+          id:      4
+          
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Κ. Μακρύγιαννη
+        code: 055.ΚΜ
+        category:    !!models.FolderCategory
+          id:      4 
+          
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Π. Καλλιάρα
+        code: 055.ΠΚ
+        category:    !!models.FolderCategory
+          id:      4 
+          
+    - !!models.Folder
+        name:   Ατομικός Φάκελλος Κ. Χρονόπουλου
+        code: 055.ΚΧ
+        category:    !!models.FolderCategory
+          id:      4 
+          
+    - !!models.Folder
+        name:   Ακίνητο Πρεσβείας
+        code: 10
+        category:    !!models.FolderCategory
+          id:      4 
+          
+    - !!models.Folder
+        name:   Κύπρος
+        code: 120
+        category:    !!models.FolderCategory
+          id:      1 
+          
+    - !!models.Folder
+        name:   Υπερπτήσεις
+        code: 1520.1
+        category:    !!models.FolderCategory
+          id:      1 
+          
+    - !!models.Folder
+        name:   Λιβύη - Εσωτερική Κατάσταση
+        code: 1521
+        category:    !!models.FolderCategory
+          id:      1 
+          
+    - !!models.Folder
+        name:   Λιβύη - Εξωτερική Πολιτική
+        code: 1522
+        category:    !!models.FolderCategory
+          id:      1 
+                    
+    - !!models.Folder
+        name:   Αραβικά κράτη - Μέση Ανατολή
+        code: 1522.1
+        category:    !!models.FolderCategory
+          id:      1 
+                              
+    - !!models.Folder
+        name:   Κράτη Μέλη Ε.Ε.
+        code: 1522.2
+        category:    !!models.FolderCategory
+          id:      1 
+                                        
+    - !!models.Folder
+        name:   Ρωσία, Κράτη Καυκάσου, Εύξεινου Πόντου
+        code: 1522.4
+        category:    !!models.FolderCategory
+          id:      1 
+                                        
+    - !!models.Folder
+        name:   Κράτη Αφρικής - Εκτός Αραβικών
+        code: 1522.6
+        category:    !!models.FolderCategory
+          id:      1 
+                                        
+    - !!models.Folder
+        name:   Πολιτικές Σχέσεις με Ελλάδα
+        code: 1523
+        category:    !!models.FolderCategory
+          id:      1 
+                                        
+    - !!models.Folder
+        name:   Οικονομικές και Εμπορικές Σχέσεις με Ελλάδα
+        code: 1523.1
+        category:    !!models.FolderCategory
+          id:      1 
+                                        
+    - !!models.Folder
+        name:   Στρατιωτικές και Αμυντικές Σχέσεις με Ελλάδα
+        code: 1523.2
+        category:    !!models.FolderCategory
+          id:      1 
+                                                  
+    - !!models.Folder
+        name:   Αναγκαστική Εκτέλεση κατά Λιβυκού Δημοσίου
+        code: 1523.9
+        category:    !!models.FolderCategory
+          id:      1
+                                                            
+    - !!models.Folder
+        name:   Ασφαλιστικά - Εργατικά θέματα
+        code: 270
+        category:    !!models.FolderCategory
+          id:      2
+                                                                      
+    - !!models.Folder
+        name:   Εκκλησιαστικά θέματα
+        code: 300
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                                                                                          
+    - !!models.Folder
+        name:   Σουδάν Νταρφούρ
+        code: 3048
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                    
+    - !!models.Folder
+        name:   ΟΗΕ
+        code: 3200
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                              
+    - !!models.Folder
+        name:   Ε.Ε. Λιβύη
+        code: 3423.1
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                                        
+    - !!models.Folder
+        name:   Υποψηφιότητες
+        code: 3800
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                                                  
+    - !!models.Folder
+        name:   Μορφωτικά και Πολιτιστικά θέματα
+        code: 410
+        category:    !!models.FolderCategory
+          id:      1
+          
+    - !!models.Folder
+        name:   Θέματα Προσωπικού - Γενικά
+        code: 50
+        category:    !!models.FolderCategory
+          id:      4
+                    
+    - !!models.Folder
+        name:   Ελληνική Κοινότητα Βεγγάζης
+        code: 509
+        category:    !!models.FolderCategory
+          id:      1
+                              
+    - !!models.Folder
+        name:   Ελληνική Κοινότητα Τρίπολης
+        code: 510
+        category:    !!models.FolderCategory
+          id:      1
+                                        
+    - !!models.Folder
+        name:   Βοηθητικό Προσωπικό
+        code: 055.12
+        category:    !!models.FolderCategory
+          id:      4
+                                         
+    - !!models.Folder
+        name:   Ελληνικά Σχολεία Τρίπολης
+        code: 551
+        category:    !!models.FolderCategory
+          id:      1
+                                                  
+    - !!models.Folder
+        name:   Βοηθητικό Προσωπικό
+        code: 552
+        category:    !!models.FolderCategory
+          id:      4
+                                                            
+    - !!models.Folder
+        name:   ΑΚ.ΑΜ.
+        code: 056
+        category:    !!models.FolderCategory
+          id:      4
+                                                                      
+    - !!models.Folder
+        name:   Ο.Ε.Υ.
+        code: 057
+        category:    !!models.FolderCategory
+          id:      4
+                                                                                
+    - !!models.Folder
+        name:   Εγκρίσεις - Ανανεώσεις διαβατηρίων
+        code: 610
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                          
+    - !!models.Folder
+        name:   Διαβατήρια ξένων υπηκόων - Θέματα Schengen
+        code: 619
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                    
+    - !!models.Folder
+        name:   Μόνιμοι Κάτοικοι Εξωτερικού - Προξενικά Μητρώα
+        code: 640
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                    
+    - !!models.Folder
+        name:   Λίβυοι τραυματίες
+        code: 650
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                              
+    - !!models.Folder
+        name:   Κληρονομικές και φορολογικές υποθέσεις
+        code: 670
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                                        
+    - !!models.Folder
+        name:   Εκδόσεις, συλλήψεις, διώξεις, επιδόσεις δικογράφων, ανακλήσεις ιθαγενειών
+        code: 680
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                                        
+    - !!models.Folder
+        name:   Ασφάλεια Πρεσβείας - Προσωπικού
+        code: 070
+        category:    !!models.FolderCategory
+          id:      4
+                                                                                                                        
+    - !!models.Folder
+        name:   Λοιπά Προξενικά θέματα
+        code: 700
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                                                  
+    - !!models.Folder
+        name:   Προξενικές Εισπράξεις
+        code: 710
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                            
+    - !!models.Folder
+        name:   Οικονομικές αναφορές
+        code: 711
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                            
+    - !!models.Folder
+        name:   Τραπεζικοί Λογαριασμοί
+        code: 711.1
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                            
+    - !!models.Folder
+        name:   Αξίες - Ένσημα, διαβατήρια, ΕΑΘΕ
+        code: 712
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                            
+    - !!models.Folder
+        name:   Ληξιαρχικές πράξεις, εγγραφές σε δημοτολογιο
+        code: 730
+        category:    !!models.FolderCategory
+          id:      2
+                                                                                                                                            
+    - !!models.Folder
+        name:   Στρατολογικά
+        code: 790
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                            
+    - !!models.Folder
+        name:   Εθιμοτυπία
+        code: 800
+        category:    !!models.FolderCategory
+          id:      1
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Ισοτιμίες
+        code: 083
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Εθιμοτυπία
+        code: 085
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Λειτουργικές δαπάνες Πρεσβείας - Εξοπλισμός
+        code: 085.1
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Δημόσιες Σχέσεις
+        code: 085.2
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Δαπάνες οχημάτων Πρεσβείας
+        code: 085.3
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Παγία προκαταβολή
+        code: 085.4
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Δαπάνες κατοικίας
+        code: 085.5
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Απόρρητες δαπάνες
+        code: 087
+        category:    !!models.FolderCategory
+          id:      3
+                                                                                                                                                      
+    - !!models.Folder
+        name:   Διπλωματικό Ταχυδρομείο
+        code: 095
+        category:    !!models.FolderCategory
+          id:      4
+                                                                                                                                                            
+    - !!models.Folder
+        name:   ΑΝΕΥ
+        code: ΑΝΕΥ
+        category:    !!models.FolderCategory
+          id:      1

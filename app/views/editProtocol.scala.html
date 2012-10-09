@@ -1,0 +1,70 @@
+@(protoForm: Form[Protocol], user: User, id: Long)
+
+@import helper._
+@import java.util.Date
+@import java.text.SimpleDateFormat
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Επεξεργασία εξερχομένου", user) {
+    
+    @form(routes.DataTable.updateProtocol(id)) {
+    
+        <fieldset>
+            <legend>Επεξεργασία εξερχομένου</legend>
+            
+            
+            @inputText(
+	        	protoForm("alfasigma"), 
+	        	'_label -> "Αριθμός σήματος: "
+	        )
+                       
+	        @textarea(
+	        	protoForm("name"),
+	        	'_label -> "Θέμα: ",
+	        	'_showConstraints -> false,
+	        	'cols -> 50
+	        ) 
+	               
+	        
+	        @inputText(
+	        	protoForm("createdon"), 
+	        	'_label -> "Δημιουργήθηκε: ",
+	        	'placeholder -> new SimpleDateFormat("dd-MM-yyyy").format(new Date())
+	        )
+	        
+	        	        
+	        @select(
+	            protoForm("creator.username"), 
+	            options(User.options),
+	            '_default -> "--- Επιλέξτε χρήστη ---",
+	            '_label -> "Δημιουργός :  ",
+	            '_error -> protoForm("creator").error.map(_.withMessage("Please select a creator")),
+	            '_showConstraints -> false
+	        ) 
+	        
+	        
+	        @select(
+	            protoForm("folder.id"), 
+	            options(Folder.options),
+	            '_default -> "--- Επιλέξτε φάκελο ---",
+	            '_label -> "Φάκελος :  ",
+	            '_error -> protoForm("folder").error.map(_.withMessage("Please select a folder")),
+	            '_showConstraints -> true
+	        ) 
+	              
+            
+        </fieldset>  
+        
+
+        <div class="actions">
+        	<input type="submit" value="Update">
+        	<a href="@routes.DataTable.index" class="btn">Cancel</a>
+        </div>
+    }
+    
+        @form(routes.DataTable.deleteProtocol(id), 'class -> "topRight") {
+        <input type="submit" value="Διαγραφή πρωτοκόλλου" class="btn danger">
+    }
+    
+}

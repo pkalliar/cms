@@ -1,0 +1,77 @@
+@(protoForm: Form[IncomingDoc], user: User, id: Long)
+
+@import helper._
+@import java.util.Date
+@import java.text.SimpleDateFormat
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Επεξεργασία εισερχόμενου", user) {
+    
+    @form(routes.IncomingDocs.updateProtocol(id)) {
+    
+        <fieldset>
+            <legend>Επεξεργασία εισερχόμενου</legend>
+                       
+           	@inputText(
+	        	protoForm("protocolnumber"), 
+	        	'_label -> "Αριθμός πρωτοκόλλου: "
+	        )
+                       
+	        @textarea(
+	        	protoForm("name"),
+	        	'_label -> "Θέμα: ",
+	        	'_showConstraints -> false,
+	        	'cols -> 50
+	        ) 
+	               
+	        
+	        @inputText(
+	        	protoForm("receivedon"), 
+	        	'_label -> "Δημιουργήθηκε: ",
+	        	'placeholder -> new SimpleDateFormat("dd-MM-yyyy").format(new Date())
+	        )
+	        
+	        
+	        @inputText(
+	            protoForm("sender"), 
+	            '_label -> "Αποστολέας:  "
+	        )
+	        
+	        @select(
+	            protoForm("folder.id"), 
+	            options(Folder.options),
+	            '_default -> "--- Επιλέξτε φάκελο ---",
+	            '_label -> "Φάκελος :  ",
+	            '_error -> protoForm("folder").error.map(_.withMessage("Please select a folder")),
+	            '_showConstraints -> false
+	        )   
+	        
+	        @select(
+	            protoForm("medium.id"), 
+	            options = options(TransmissionMedium.options),
+	            '_default -> "--- Επιλέξτε μέσο ---",
+	            '_label -> "Μέσο μετάδοσης :  ",
+	            '_showConstraints -> false
+	        ) 
+	        
+	      	@inputText(
+	            protoForm("location"), 
+	            '_label -> "location:  "
+	        )  
+	              
+            
+        </fieldset>  
+        
+
+        <div class="actions">
+        	<input type="submit" value="Update">
+        	<a href="@routes.IncomingDocs.index" class="btn">Cancel</a>
+        </div>
+    }
+    
+        @form(routes.IncomingDocs.deleteProtocol(id), 'class -> "topRight") {
+        <input type="submit" value="Διαγραφή εισερχόμενου" class="btn danger">
+    }
+    
+}

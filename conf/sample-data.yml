@@ -1,0 +1,19 @@
+protocols:
+
+    - !!models.Protocol
+        alfasigma:   490
+        name:  epithesi sti syria
+        createdon: 2012-04-17
+        folder:    !!models.Folder
+                id:      1
+        creator:    !!models.User
+                username:      pkalliar
+
+    - !!models.Protocol
+        alfasigma:   491
+        name:  ekloges sti livii
+        createdon: 2012-3-5
+        folder:    !!models.Folder
+                id:      2
+        creator:    !!models.User
+                username:      mitzalis

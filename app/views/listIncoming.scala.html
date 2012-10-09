@@ -1,0 +1,45 @@
+@(message: String, user: User)
+ 
+@main("Ηλεκτρονικό Αρχείο Πρεσβείας Τρίπολης", user) {
+ 
+<script type="text/javascript">
+  /* Table initialisation */
+  $(document).ready(function() {
+    $('#contacts_table').dataTable( {
+      "bProcessing": true,
+      "aaSorting": [[ 0, "desc" ]],
+      "bServerSide": true,
+      "bJQueryUI": true,
+      "sPaginationType": "full_numbers",
+      "sAjaxSource": "@routes.IncomingDocs.list()"
+    });
+  });
+</script>
+ 
+<strong>@message</strong>
+ 
+<table id="contacts_table" class='display'>
+  <thead>
+    <tr>
+      <th>ΑΣ</th>
+      <th>ΦΑΚΕΛΟΣ</th>
+      <th>ΗΜΕΡΟΜΗΝΙΑ</th>
+      <th>ΑΠΟΣΤΟΛΕΑΣ</th>
+      <th>ΘΕΜΑ</th>
+      <th>ΜΕΣΟ</th>
+      <th>ΑΡΧΕΙΟ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="10%">Initializing..</td>
+      <td width="12%">Initializing..</td>
+      <td width="10%">Initializing..</td>
+      <td width="12%">Initializing..</td>
+      <td width="40%">Initializing..</td>
+      <td width="8%">Initializing..</td>
+      <td width="8%">Initializing..</td>
+    </tr>
+  </tbody>
+</table>
+}

@@ -1,0 +1,75 @@
+@(protoForm: Form[IncomingDoc], user: User)
+
+@import helper._
+@import java.util.Date
+@import java.text.SimpleDateFormat
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Νέο εισερχόμενο", user) {
+  
+    
+    @form(routes.IncomingDocs.newProtocol()) {
+    
+        <fieldset>
+            <legend>Εισάγετε το νέο εισερχόμενο έγγραφο</legend>
+                       
+           	@inputText(
+	        	protoForm("protocolnumber"), 
+	        	'_label -> "Αριθμός πρωτοκόλλου: "
+	        )
+                       
+	        @textarea(
+	        	protoForm("name"),
+	        	'_label -> "Θέμα: ",
+	        	'_showConstraints -> false,
+	        	'cols -> 50
+	        ) 
+	               
+	        
+	        @inputText(
+	        	protoForm("receivedon"), 
+	        	'_label -> "Δημιουργήθηκε: ",
+	        	'placeholder -> new SimpleDateFormat("dd-MM-yyyy").format(new Date())
+	        )
+	        
+	        
+	        @inputText(
+	            protoForm("sender"), 
+	            '_label -> "Αποστολέας:  "
+	        )
+	        
+	        @select(
+	            protoForm("folder.id"), 
+	            options(Folder.options),
+	            '_default -> "--- Επιλέξτε φάκελο ---",
+	            '_label -> "Φάκελος :  ",
+	            '_error -> protoForm("folder").error.map(_.withMessage("Please select a folder")),
+	            '_showConstraints -> false
+	        )   
+	        
+	        @select(
+	            protoForm("medium.id"), 
+	            options = options(TransmissionMedium.options),
+	            '_default -> "--- Επιλέξτε μέσο ---",
+	            '_label -> "Μέσο μετάδοσης :  ",
+	            '_showConstraints -> false
+	        ) 
+	        
+	      	@inputText(
+	            protoForm("location"), 
+	            '_label -> "location:  "
+	        )  
+	              
+            
+        </fieldset>  
+        
+        <div class="actions">
+        	<input type="submit" value="Δημιουργία">
+        	<a href="@routes.IncomingDocs.index" class="btn">Ακύρωση</a>
+        </div>
+        
+
+    }
+    
+}

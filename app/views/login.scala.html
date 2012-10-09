@@ -1,0 +1,64 @@
+@(form: Form[Application.Login])
+
+<html>
+    <head>
+        <title>Εφαρμογή Αρχείου</title>
+		 <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/demo_table_jui.css")">
+		 <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/smoothness/jquery-ui-1.8.21.custom.css")">
+		 <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")"> 
+		 <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+		 <script src="@routes.Assets.at("javascripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
+		 <script src="@routes.Assets.at("javascripts/jquery-ui-1.8.21.custom.min.js")" type="text/javascript"></script>
+		 <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    
+        <header class="topbar">
+		    <table border="0"  class="fill">
+			<tr>
+
+	        <td width="20%">
+				<span>Ελληνική Πρεσβεία στην Τρίπολη</span>
+	        </td>
+
+			</tr>
+			</table>
+    	</header> 
+        
+        @helper.form(routes.Application.authenticate) {
+            
+            <h1>Συνδεθείτε</h1>
+            
+            @if(form.hasGlobalErrors) { 
+                <p class="error">
+                    @form.globalError.message
+                </p>
+            }
+            
+            @if(flash.contains("success")) {
+                <p class="success">
+                    @flash.get("success")
+                </p>
+            }
+            
+            <p>
+                <input type="username" name="username" placeholder="Username" value="@form("username").value">
+            </p>
+            <p>
+                <input type="password" name="password" placeholder="Password">
+            </p>
+            <p>
+                <button type="submit">Login</button>
+            </p>
+            
+        }
+        
+        <p class="note">
+            Αν δεν μπορείτε να συνδεθείτε, ζητήστε τον κωδικό σας από το Μηχανικό Επικοινωνιών.
+        </p>
+            
+    </body>
+</html>
+    
+
+
